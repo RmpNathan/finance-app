@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg: theme(colors.brand.bg);
+    --text: theme(colors.brand.text);
+    --primary: theme(colors.brand.primary);
+    --muted: theme(colors.brand.muted);
+    --radius: 14px;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-feature-settings: "liga" 1, "kern" 1;
+}
+
+:where(a, button, [role="button"], input, select, textarea, [tabindex]:not([tabindex="-1"])):focus-visible {
+    outline: 2px solid theme(colors.brand.ring);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+/* Utilitaires */
+.container-px { @apply px-4 md:px-6; }
+.card { @apply rounded-2xl bg-white shadow-card; }
