@@ -1,11 +1,10 @@
 <template>
   <div class="relative">
     <div class="relative grid grid-cols-12 gap-6">
-      <BaseCard tone="dark" class="col-span-12 lg:col-span-5 h-28">
-        Balance
-      </BaseCard>
-      <BaseCard class="col-span-12 sm:col-span-6 lg:col-span-3 h-28">Income</BaseCard>
-      <BaseCard class="col-span-12 sm:col-span-6 lg:col-span-4 h-28">Expenses</BaseCard>
+      <StatCard tone="dark" class="col-span-12 lg:col-span-4" :label="'Current Balance'"
+                :value="money(currentBalance)"/>
+      <StatCard class="col-span-12 lg:col-span-4" :label="'Income'" :value="money(totalIncome)"/>
+      <StatCard class="col-span-12 lg:col-span-4" :label="'Expenses'" :value="money(totalExpense)"/>
 
       <BaseCard class="col-span-12 lg:col-span-7 h-44">Pots</BaseCard>
       <BaseCard class="col-span-12 lg:col-span-5 h-44">Budgets</BaseCard>
@@ -17,6 +16,18 @@
 </template>
 
 <script setup>
-import AppHeader from '../components/AppHeader.vue'
-import BaseCard from '../components/ui/BaseCard.vue'
+import BaseCard from '../components/ui/card/BaseCard.vue'
+import StatCard from "@/components/overview/StatCard.vue";
+import {useTransactionsStore} from "@/stores/transactions.js";
+import {useBalanceStore} from "@/stores/balance.js";
+import {computed} from "vue";
+
+const balanceStore = useBalanceStore()
+const txStore = useTransactionsStore()
+
+const currentBalance = computed(() => balanceStore.current ?? 0)
+const totalIncome = computed(() => balanceStore.income ?? 0)
+const totalExpense = computed(() => balanceStore.expenses ?? 0)
+
+const money = (n) => new Intl.NumberFormat("en-US", {style: "currency", currency: "USD"}).format(n)
 </script>

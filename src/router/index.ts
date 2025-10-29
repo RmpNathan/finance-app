@@ -1,5 +1,5 @@
 import {createRouter, createWebHistory, RouteRecordRaw} from "vue-router";
-import Button from "@/components/ui/Button.vue";
+import Button from "@/components/ui/form/Button.vue";
 
 const routes: RouteRecordRaw[] = [
     {path: "/", redirect: "/overview", meta: {title: "Overview"}},
