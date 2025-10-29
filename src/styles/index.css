@@ -29,3 +29,21 @@ body {
 /* Utilitaires */
 .container-px { @apply px-4 md:px-6; }
 .card { @apply rounded-2xl bg-white shadow-card; }
+
+
+@layer components {
+    /* Conteneur, gouttières, largeur max, rythme vertical */
+    .page { @apply min-h-dvh bg-brand-bg text-brand-text; }
+    .page > * { @apply mx-auto w-full max-w-7xl px-4 md:px-6 xl:px-8; }
+    .page-header { @apply py-6 md:py-8 flex items-start justify-between gap-4; }
+    .page-title { @apply text-3xl font-semibold leading-tight; }
+    .page-subtitle { @apply mt-1 text-sm text-gray-500; }
+    .page-actions { @apply flex items-center gap-2; }
+
+    /* Grille de page cohérente */
+    .page-grid { @apply pb-10 grid grid-cols-12 gap-4 md:gap-6 xl:gap-8; }
+
+    /* Carte standard */
+    .card { @apply rounded-2xl bg-white shadow-card; }
+    .section { @apply card p-6 md:p-7 xl:p-8; } /* padding synchronisé avec les gap */
+}

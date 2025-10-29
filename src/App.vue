@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useAppStore } from "@/stores/app";
+import DefaultLayout from "@/layouts/DefaultLayout.vue";
 
 const appStore = useAppStore();
 appStore.init();
@@ -10,6 +11,8 @@ appStore.init();
     Loading data...
   </div>
   <div v-else>
-    <RouterView />
+    <DefaultLayout>
+      <router-view />
+    </DefaultLayout>
   </div>
 </template>

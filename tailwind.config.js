@@ -19,7 +19,7 @@ export default {
         "2xl": "20px",
       },
       boxShadow: {
-        card: "0 8px 24px rgba(0,0,0,0.06)",
+        card: "0 10px 30px rgba(0,0,0,0.06)",
       },
     },
   },

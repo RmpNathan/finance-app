@@ -35,7 +35,7 @@ const classes = computed(() => {
     lg: "h-12 px-5 text-base",
   };
   const variants: Record<Variant, string> = {
-    primary: "bg-brand.primary text-white hover:opacity-90 disabled:opacity-50",
+    primary: "bg-black text-white hover:bg-zinc-800 disabled:opacity-50",
     ghost: "bg-transparent text-brand.text hover:bg-black/5 disabled:opacity-50",
     danger: "bg-danger text-white hover:opacity-90 disabled:opacity-50",
   };
