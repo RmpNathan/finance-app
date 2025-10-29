@@ -1,12 +1,15 @@
+<script setup lang="ts">
+import { useAppStore } from "@/stores/app";
+
+const appStore = useAppStore();
+appStore.init();
+</script>
+
 <template>
-  <div>
-    <nav class="p-3 flex gap-3 text-sm underline">
-      <RouterLink to="/overview">Overview</RouterLink>
-      <RouterLink to="/transactions">Transactions</RouterLink>
-      <RouterLink to="/budgets">Budgets</RouterLink>
-      <RouterLink to="/pots">Pots</RouterLink>
-      <RouterLink to="/recurring">Recurring</RouterLink>
-    </nav>
+  <div v-if="!appStore.isReady" class="p-6 text-center text-gray-500">
+    Loading data...
+  </div>
+  <div v-else>
     <RouterView />
   </div>
 </template>
