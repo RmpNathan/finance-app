@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen flex bg-zinc-100 text-zinc-900">
-    <Sidebar class="hidden md:flex" />
+    <Sidebar class="hidden lg:flex" />
     <main class="flex-1">
       <AppHeader :title="route.meta.title">
         <template #actions>
