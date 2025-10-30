@@ -28,7 +28,7 @@
 import {computed} from 'vue'
 import {usePotsStore} from '@/stores/pots'
 import {money} from "@/utils/money";
-import iconPot from '../../../public/assets/images/icon-pot.svg'
+import iconPot from '@/assets/images/icon-pot.svg'
 import StatItem from "@/components/ui/data/StatItem.vue";
 
 const pots = usePotsStore()
