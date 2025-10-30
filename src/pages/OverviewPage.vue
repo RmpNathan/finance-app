@@ -1,9 +1,9 @@
 <template>
   <div class="relative">
     <div class="relative grid grid-cols-12 gap-6">
-      <StatCard tone="dark" class="col-span-12 lg:col-span-4" :label="'Current Balance'" :value="money(currentBalance)"/>
-      <StatCard class="col-span-12 lg:col-span-4" :label="'Income'" :value="money(totalIncome)"/>
-      <StatCard class="col-span-12 lg:col-span-4" :label="'Expenses'" :value="money(totalExpense)"/>
+      <StatCard tone="dark" class="col-span-12 md:col-span-4" :label="'Current Balance'" :value="money(currentBalance)"/>
+      <StatCard class="col-span-12 md:col-span-4" :label="'Income'" :value="money(totalIncome)"/>
+      <StatCard class="col-span-12 md:col-span-4" :label="'Expenses'" :value="money(totalExpense)"/>
       <SectionCard
           title="Pots"
           linkText="See Details"
