@@ -19,7 +19,7 @@ export interface Balance {
 
 export interface Transaction {
     id: string;
-    avatar?: string | null;
+    avatar: string;
     name: string;
     category: Category;
     date: string;
