@@ -31,7 +31,7 @@ export interface Budget {
     id: string;
     category: Category;
     maximum: number;
-    theme?: string;
+    theme: string;
 }
 
 export interface Pot {
