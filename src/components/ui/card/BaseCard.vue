@@ -2,7 +2,7 @@
   <div
       :is="as"
       :class="[
-      'rounded-2xl p-5 shadow-sm',
+      'rounded-2xl shadow-sm',
       toneClass,
       bordered ? 'ring-1 ring-black/5' : '',
       hoverable ? 'transition-shadow hover:shadow-md' : '',

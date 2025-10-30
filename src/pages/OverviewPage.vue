@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import BaseCard from '../components/ui/card/BaseCard.vue'
+import BaseCard from '@/components/ui/card/BaseCard.vue'
 import StatCard from "@/components/overview/StatCard.vue";
 import {useBalanceStore} from "@/stores/balance.js";
 import {computed} from "vue";
