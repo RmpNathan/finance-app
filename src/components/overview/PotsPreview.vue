@@ -13,16 +13,12 @@
     </div>
 
     <div class="col-span-12 md:col-span-6 grid grid-cols-2 gap-x-10 gap-y-4">
-      <div v-for="p in topPots" :key="p.name" class="flex items-start items-center gap-3">
-        <span
-        class="shrink-0 w-1.5 self-stretch rounded-full"
-        :style="{ backgroundColor: p.theme }"
-        aria-hidden="true"
+      <div v-for="p in topPots" :key="p.name" class="flex items-center gap-3">
+        <StatItem
+          :title="p.name"
+          :color="p.theme"
+          :amount="p.total"
         />
-        <div class="flex-1">
-          <div class="text-sm text-zinc-500">{{ p.name }}</div>
-          <div class="font-semibold">{{ money(p.total) }}</div>
-        </div>
       </div>
     </div>
   </div>
@@ -33,6 +29,7 @@ import {computed} from 'vue'
 import {usePotsStore} from '@/stores/pots'
 import {money} from "@/utils/money";
 import iconPot from '../../../public/assets/images/icon-pot.svg'
+import StatItem from "@/components/ui/data/StatItem.vue";
 
 const pots = usePotsStore()
 

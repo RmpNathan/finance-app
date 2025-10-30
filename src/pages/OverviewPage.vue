@@ -11,10 +11,14 @@
       >
         <PotsPreview />
       </SectionCard>
-      <BaseCard class="col-span-12 lg:col-span-5 h-44">Budgets</BaseCard>
-
-      <BaseCard class="col-span-12 xl:col-span-8 h-80">Transactions</BaseCard>
-      <BaseCard class="col-span-12 xl:col-span-4 h-80">Recurring Bills</BaseCard>
+      <SectionCard
+          title="Budgets"
+          linkText="See Details"
+          class="col-span-12 lg:col-span-5"
+      >
+      </SectionCard>
+      <BaseCard class="col-span-12 xl:col-span-7">Transactions</BaseCard>
+      <BaseCard class="col-span-12 xl:col-span-4">Recurring Bills</BaseCard>
     </div>
   </div>
 </template>
