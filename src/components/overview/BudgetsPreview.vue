@@ -1,22 +1,13 @@
 <template>
   <div class="grid grid-cols-12 gap-6 items-center">
     <div class="col-span-12 md:col-span-7 flex items-center justify-center">
-      <div class="relative w-full flex items-center justify-center" style="height:240px">
-        <ApexChart
-            :key="chartKey"
-            type="donut"
-            height="240"
-            :options="options"
-            :series="series"
-        />
-        <!-- Overlay centre -->
-        <div class="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <div class="text-center">
-            <div class="text-2xl font-bold">{{ money(totalSpent) }}</div>
-            <div class="text-xs text-gray-500">of {{ money(totalLimit) }} limit</div>
-          </div>
-        </div>
-      </div>
+      <DonutChart
+          :series="series"
+          :labels="budgetsView.map(b => b.name)"
+          :colors="budgetsView.map(b => b.color)"
+          :total="totalSpent"
+          :limit="totalLimit"
+      />
     </div>
 
     <div class="col-span-12 md:col-span-5 space-y-3">
@@ -37,6 +28,7 @@ import {money} from '@/utils/money'
 import {useBudgetsStore} from '@/stores/budgets'
 import {useTransactionsStore} from '@/stores/transactions'
 import StatItem from '@/components/ui/data/StatItem.vue'
+import DonutChart from "@/components/ui/charts/DonutChart.vue";
 
 const budgetsStore = useBudgetsStore()
 const txStore = useTransactionsStore()
