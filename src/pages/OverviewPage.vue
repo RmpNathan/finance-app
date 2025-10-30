@@ -24,7 +24,13 @@
         >
           <BudgetsPreview />
         </SectionCard>
-        <BaseCard>Recurring Bills</BaseCard>
+        <SectionCard
+            title="Recurring Bills"
+            linkText="See Details"
+            @action="router.push('/bills')"
+        >
+          <RecurringBillsCardBody/>
+        </SectionCard>
       </div>
     </div>
   </div>
@@ -41,6 +47,7 @@ import { computed } from 'vue'
 import { money } from '@/utils/money.js'
 import router from '@/router/index.js'
 import TransactionsPreview from "@/components/overview/TransactionsPreview.vue";
+import RecurringBillsCardBody from "@/components/overview/RecurringBillsCardBody.vue";
 
 const balanceStore = useBalanceStore()
 const currentBalance = computed(() => balanceStore.current ?? 0)
