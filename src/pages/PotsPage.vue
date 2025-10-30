@@ -1,3 +1,3 @@
 <template>
-  <main class="p-4" id="main">Post</main>
+  <main class="p-4" id="main">Work in progress</main>
 </template>

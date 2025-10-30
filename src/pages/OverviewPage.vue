@@ -37,7 +37,6 @@
 </template>
 
 <script setup>
-import BaseCard from '@/components/ui/card/BaseCard.vue'
 import StatCard from '@/components/overview/StatCard.vue'
 import SectionCard from '@/components/ui/card/SectionCard.vue'
 import PotsPreview from '@/components/overview/PotsPreview.vue'
