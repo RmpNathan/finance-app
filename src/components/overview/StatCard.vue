@@ -1,5 +1,5 @@
 <template>
-  <BaseCard :tone="tone" class="px-5 py-6">
+  <BaseCard :tone="tone">
     <template #header>
       <div class="text-sm" :class="tone === 'dark' ? 'opacity-80' : 'text-zinc-500'">{{ label }}</div>
     </template>

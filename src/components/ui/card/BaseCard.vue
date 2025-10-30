@@ -1,8 +1,7 @@
 <template>
   <div
-      :is="as"
       :class="[
-      'rounded-2xl shadow-sm',
+      'rounded-xl shadow-sm px-8 py-6',
       toneClass,
       bordered ? 'ring-1 ring-black/5' : '',
       hoverable ? 'transition-shadow hover:shadow-md' : '',
@@ -25,7 +24,6 @@
 import {computed} from "vue";
 
 const props = defineProps({
-  as: { type: String, default: 'div' },
   tone: {
     type: String,
     default: 'surface', // 'surface' | 'muted' | 'dark' | 'brand' | 'danger' etc.
