@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen flex bg-zinc-100 text-zinc-900">
-    <Sidebar class="hidden lg:flex" />
+    <AppNav />
     <main class="flex-1">
       <AppHeader :title="route.meta.title">
         <template #actions>
@@ -23,7 +23,7 @@
 
 <script setup>
 import { useRoute } from 'vue-router'
-import Sidebar from '../components/Sidebar.vue'
 import AppHeader from '../components/AppHeader.vue'
+import AppNav from "@/layouts/AppNav.vue";
 const route = useRoute()
 </script>

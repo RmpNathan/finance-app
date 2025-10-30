@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-12 gap-6 items-center">
-    <div class="col-span-12 md:col-span-7 flex items-center justify-center">
+    <div class="col-span-12 md:col-span-8 flex items-center justify-center">
       <DonutChart
           :series="series"
           :labels="budgetsView.map(b => b.name)"
@@ -10,7 +10,7 @@
       />
     </div>
 
-    <div class="col-span-12 md:col-span-5 space-y-3">
+    <div class="col-span-12 md:col-span-4 space-y-3">
       <StatItem
           v-for="b in budgetsView"
           :key="b.name"
