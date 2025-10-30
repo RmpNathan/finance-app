@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen flex bg-zinc-100 text-zinc-900">
     <AppNav />
-    <main class="flex-1">
+    <main class="flex-1 pb-[calc(64px+env(safe-area-inset-bottom))] lg:pb-0">
       <AppHeader :title="route.meta.title">
         <template #actions>
           <template v-for="(action, i) in route.meta.headerActions || []" :key="i">
