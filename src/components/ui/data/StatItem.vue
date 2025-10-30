@@ -1,14 +1,15 @@
+
+
 <template>
-  <span
-      class="shrink-0 w-1.5 self-stretch rounded-full"
-      :style="{ backgroundColor: color }"
-      aria-hidden="true"
-  />
-  <div class="flex-1">
-    <div class="text-sm text-zinc-500">{{ title }}</div>
-    <div class="font-semibold">{{ money(amount) }}</div>
+  <div class="flex items-start gap-3">
+    <span class="shrink-0 w-1.5 self-stretch rounded-full" :style="{ backgroundColor: color }"/>
+    <div class="flex-1 min-w-0">
+      <div class="text-sm text-zinc-500 truncate">{{ title }}</div>
+      <div class="font-semibold">{{ money(amount) }}</div>
+    </div>
   </div>
 </template>
+
 
 <script setup lang="ts">
 import {money} from "@/utils/money";
