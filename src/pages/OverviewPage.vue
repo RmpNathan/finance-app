@@ -8,8 +8,13 @@
         <SectionCard title="Pots" linkText="See Details">
           <PotsPreview />
         </SectionCard>
-
-        <BaseCard>Transactions</BaseCard>
+        <SectionCard
+            title="Transactions"
+            linkText="View all"
+            @action="router.push('/transactions')"
+        >
+          <TransactionsPreview />
+        </SectionCard>
       </div>
       <div class="col-span-12 lg:col-span-5 space-y-6">
         <SectionCard
@@ -35,6 +40,7 @@ import { useBalanceStore } from '@/stores/balance.js'
 import { computed } from 'vue'
 import { money } from '@/utils/money.js'
 import router from '@/router/index.js'
+import TransactionsPreview from "@/components/overview/TransactionsPreview.vue";
 
 const balanceStore = useBalanceStore()
 const currentBalance = computed(() => balanceStore.current ?? 0)
