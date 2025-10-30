@@ -14,8 +14,8 @@ export function money(
     const {
         locale = 'en-US',
         currency = 'USD',
-        minimumFractionDigits,
-        maximumFractionDigits,
+        minimumFractionDigits = 0,
+        maximumFractionDigits = 0,
     } = opts
 
     const key = JSON.stringify({ locale, currency, minimumFractionDigits, maximumFractionDigits })
